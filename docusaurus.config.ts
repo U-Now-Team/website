@@ -5,8 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'U-Now Docs',
-  tagline: 'Documentation for U-Now',
+  title: 'U Know, U Now',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -60,12 +59,12 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'U-Now',
-      logo: {
-        alt: 'U-Now Logo',
-        src: 'img/logo.svg',
-      },
       items: [
+        {
+          to: '/',
+          label: 'Home',
+          position: 'left',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
