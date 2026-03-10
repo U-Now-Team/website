@@ -12,7 +12,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "prepare": "husky"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
@@ -27,6 +28,9 @@
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/tsconfig": "3.9.2",
     "@docusaurus/types": "3.9.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.2",
+    "pretty-quick": "^4.2.2",
     "typescript": "~5.6.2"
   },
   "browserslist": {
@@ -43,5 +47,11 @@
   },
   "engines": {
     "node": ">=20.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,md,mdx}": [
+      "pretty-quick --staged",
+      "npm run typecheck"
+    ]
   }
 }
