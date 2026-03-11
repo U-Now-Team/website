@@ -1,0 +1,14 @@
+{
+  "item.label.Home": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.AI 开发": {
+    "message": "AI Development",
+    "description": "Navbar item for AI development"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

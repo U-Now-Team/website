@@ -30,8 +30,18 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "zh",
+    locales: ["zh", "en"],
+    localeConfigs: {
+      zh: {
+        label: "中文",
+        direction: "ltr",
+      },
+      en: {
+        label: "English",
+        direction: "ltr",
+      },
+    },
   },
 
   presets: [
@@ -60,30 +70,22 @@ const config: Config = {
     navbar: {
       items: [
         {
+          type: "localeDropdown",
+          position: "right",
+        },
+        {
           to: "/",
           label: "Home",
           position: "left",
         },
         {
-          type: "dropdown",
+          type: "docSidebar",
           sidebarId: "aiSidebar",
           position: "left",
           label: "AI 开发",
-          items: [
-            {
-              type: "doc",
-              label: "OpenCode",
-              docId: "ai-dev/opencode/README",
-            },
-            {
-              type: "doc",
-              label: "OpenClaw",
-              docId: "ai-dev/openclaw/README",
-            },
-          ],
         },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/U-Now-Team/website",
           label: "GitHub",
           position: "right",
         },
@@ -91,7 +93,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      copyright: `Copyright © ${new Date().getFullYear()} U-Now Team. All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} U-Now 科技. 保留所有权利`,
     },
     prism: {
       theme: prismThemes.github,
