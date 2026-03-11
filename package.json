@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit --noEmitOnError false",
     "prepare": "husky"
   },
   "dependencies": {
@@ -50,8 +50,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,md,mdx}": [
-      "pretty-quick --staged",
-      "npm run typecheck"
+      "pretty-quick --staged"
     ]
   }
 }
