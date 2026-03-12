@@ -12,7 +12,7 @@ export default function DocItemWithComments(props) {
           repo="U-Now-Team/website"
           repoId="R_kgDORiLwWQ"
           category="General"
-          data-category-id="DIC_kwDORiLwWc4C4OA7"
+          categoryId="DIC_kwDORiLwWc4C4OA7"
           mapping="pathname"
           strict="0"
           reactionsEnabled="1"
