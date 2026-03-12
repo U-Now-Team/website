@@ -93,7 +93,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      copyright: `© ${new Date().getFullYear()} U-Now 科技. 保留所有权利`,
+      copyright: `© ${new Date().getFullYear()} U-Now 团队. 保留所有权利`,
     },
     prism: {
       theme: prismThemes.github,
