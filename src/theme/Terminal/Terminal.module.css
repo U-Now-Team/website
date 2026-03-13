@@ -1,0 +1,119 @@
+/* Terminal 组件样式 */
+.container {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 16px 0;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  border: 1px solid #e5e7eb;
+}
+
+/* 顶部标题栏 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
+  position: relative;
+  min-height: 32px;
+  transition: border-bottom-color 0.3s ease;
+}
+
+/* 左上角三点图标 */
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.dots span {
+  width: 4px;
+  height: 4px;
+  background: #9ca3af;
+  border-radius: 50%;
+}
+
+/* 中间胶囊标题 */
+.titleBadge {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #64748b;
+  color: white;
+  padding: 4px 16px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease;
+}
+
+/* 右上角圆形按钮 */
+.toggleButton {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.toggleButton:hover:not(:disabled) {
+  transform: scale(1.15);
+}
+
+.toggleButton:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+/* 内容区域 - 使用 Docusaurus 默认代码块背景 */
+.content {
+  padding: 16px;
+  background: #f6f8fa;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* 代码块样式 - 继承 Docusaurus 默认样式 */
+.content pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.content code {
+  background: transparent;
+  padding: 0;
+}
+
+.content pre code {
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 深色模式 */
+[data-theme='dark'] .content {
+  background: #1e1e1e;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 12px;
+  }
+  
+  .titleBadge {
+    padding: 3px 12px;
+    font-size: 12px;
+  }
+  
+  .content {
+    padding: 12px;
+  }
+}
