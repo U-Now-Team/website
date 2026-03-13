@@ -32,6 +32,43 @@
   max-width: 100%;
 }
 
+/* 标题序号 - 每个文档独立计数 */
+.markdown {
+  counter-reset: h2;
+}
+
+.markdown h2::before {
+  counter-increment: h2;
+  content: counter(h2) ". ";
+  margin-right: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.markdown h3 {
+  counter-reset: h3;
+}
+
+.markdown h3::before {
+  counter-increment: h3;
+  content: counter(h2) "." counter(h3) " ";
+  margin-right: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.markdown h4 {
+  counter-reset: h4;
+}
+
+.markdown h4::before {
+  counter-increment: h4;
+  content: counter(h2) "." counter(h3) "." counter(h4) " ";
+  margin-right: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
