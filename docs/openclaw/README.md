@@ -1,6 +1,6 @@
 ---
-sidebar_position: 10
-title: OpenClaw 使用
+sidebar_position: 0
+title: OpenClaw
 ---
 
 ## 简介

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 5
-title: OpenCode 使用
+sidebar_position: 0
+title: OpenCode
 ---
 
 ## 简介
