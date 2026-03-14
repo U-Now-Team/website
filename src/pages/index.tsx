@@ -82,7 +82,7 @@ function TutorialCarousel(): ReactNode {
         message: "开源 AI 助手框架",
       }),
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      to: "/docs/openclaw/",
+      to: "/website/docs/openclaw/",
     },
     {
       title: translate({
@@ -94,7 +94,7 @@ function TutorialCarousel(): ReactNode {
         message: "AI 编程助手",
       }),
       gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-      to: "/docs/opencode/",
+      to: "/website/docs/opencode/",
     },
   ];
 
