@@ -5,6 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import Translate, { translate } from "@docusaurus/Translate";
+import Link from "@docusaurus/Link";
 
 import styles from "./index.module.css";
 
@@ -46,87 +47,55 @@ function HomepageHeader() {
   );
 }
 
-function TutorialCard({
+function FeatureCard({
   title,
   description,
-  gradient,
   to,
 }: {
   title: string;
   description: string;
-  gradient: string;
   to: string;
 }): ReactNode {
   return (
-    <a href={to} className={styles.tutorialCard}>
-      <div className={styles.cardImage} style={{ background: gradient }}>
-        <span className={styles.cardTitle}>{title}</span>
-      </div>
-      <div className={styles.cardContent}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </a>
+    <Link to={to} className={styles.featureCard}>
+      <h3 className={styles.featureTitle}>{title}</h3>
+      <p className={styles.featureDesc}>{description}</p>
+    </Link>
   );
 }
 
-function TutorialCarousel(): ReactNode {
-  const tutorials = [
+function HomepageFeatures(): ReactNode {
+  const features = [
     {
       title: translate({
-        id: "homepage.tutorial.openclaw.title",
+        id: "homepage.feature.openclaw.title",
         message: "OpenClaw",
       }),
       description: translate({
-        id: "homepage.tutorial.openclaw.desc",
+        id: "homepage.feature.openclaw.desc",
         message: "开源 AI 助手框架",
       }),
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       to: "/docs/openclaw/",
     },
     {
       title: translate({
-        id: "homepage.tutorial.opencode.title",
+        id: "homepage.feature.opencode.title",
         message: "OpenCode",
       }),
       description: translate({
-        id: "homepage.tutorial.opencode.desc",
-        message: "AI 编程助手",
+        id: "homepage.feature.opencode.desc",
+        message: "开源 AI 编程助手",
       }),
-      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
       to: "/docs/opencode/",
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % tutorials.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [tutorials.length]);
-
   return (
-    <section className={styles.carouselSection}>
+    <section className={styles.features}>
       <div className="container">
-        <div className={styles.carouselWrapper}>
-          <div 
-            className={styles.carouselTrack}
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {tutorials.map((tutorial, idx) => (
-              <TutorialCard key={idx} {...tutorial} />
-            ))}
-          </div>
-        </div>
-        <div className={styles.carouselDots}>
-          {tutorials.map((_, idx) => (
-            <span 
-              key={idx}
-              className={clsx(styles.dot, idx === currentIndex && styles.dotActive)}
-              onClick={() => setCurrentIndex(idx)}
-            />
+        <div className={styles.featuresGrid}>
+          {features.map((props, idx) => (
+            <FeatureCard key={idx} {...props} />
           ))}
         </div>
       </div>
@@ -146,7 +115,7 @@ export default function Home(): ReactNode {
     >
       <HomepageHeader />
       <main>
-        <TutorialCarousel />
+        <HomepageFeatures />
       </main>
     </Layout>
   );
