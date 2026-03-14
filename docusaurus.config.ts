@@ -83,10 +83,19 @@ const config: Config = {
           position: "left",
         },
         {
-          type: "docSidebar",
-          sidebarId: "aiSidebar",
-          position: "left",
+          type: "dropdown",
           label: "AI 开发",
+          position: "left",
+          items: [
+            {
+              to: "/docs/ai-dev/openclaw/",
+              label: "OpenClaw",
+            },
+            {
+              to: "/docs/ai-dev/opencode/",
+              label: "OpenCode",
+            },
+          ],
         },
         {
           href: "https://github.com/U-Now-Team/website",
