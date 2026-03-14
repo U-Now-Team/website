@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
@@ -46,6 +46,94 @@ function HomepageHeader() {
   );
 }
 
+function TutorialCard({
+  title,
+  description,
+  image,
+  to,
+}: {
+  title: string;
+  description: string;
+  image: string;
+  to: string;
+}): ReactNode {
+  return (
+    <a href={to} className={styles.tutorialCard}>
+      <div className={styles.cardImage}>
+        <img src={image} alt={title} />
+      </div>
+      <div className={styles.cardContent}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </a>
+  );
+}
+
+function TutorialCarousel(): ReactNode {
+  const tutorials = [
+    {
+      title: translate({
+        id: "homepage.tutorial.openclaw.title",
+        message: "OpenClaw",
+      }),
+      description: translate({
+        id: "homepage.tutorial.openclaw.desc",
+        message: "开源 AI 助手框架",
+      }),
+      image: "/img/openclaw.svg",
+      to: "/docs/openclaw/",
+    },
+    {
+      title: translate({
+        id: "homepage.tutorial.opencode.title",
+        message: "OpenCode",
+      }),
+      description: translate({
+        id: "homepage.tutorial.opencode.desc",
+        message: "AI 编程助手",
+      }),
+      image: "/img/opencode.svg",
+      to: "/docs/opencode/",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % tutorials.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [tutorials.length]);
+
+  return (
+    <section className={styles.carouselSection}>
+      <div className="container">
+        <div className={styles.carouselWrapper}>
+          <div 
+            className={styles.carouselTrack}
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {tutorials.map((tutorial, idx) => (
+              <TutorialCard key={idx} {...tutorial} />
+            ))}
+          </div>
+        </div>
+        <div className={styles.carouselDots}>
+          {tutorials.map((_, idx) => (
+            <span 
+              key={idx}
+              className={clsx(styles.dot, idx === currentIndex && styles.dotActive)}
+              onClick={() => setCurrentIndex(idx)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -57,6 +145,9 @@ export default function Home(): ReactNode {
       })}
     >
       <HomepageHeader />
+      <main>
+        <TutorialCarousel />
+      </main>
     </Layout>
   );
 }

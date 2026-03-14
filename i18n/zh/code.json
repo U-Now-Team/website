@@ -362,6 +362,22 @@
     "message": "探索前沿技术，引领行业",
     "description": "前沿特性描述"
   },
+  "homepage.tutorial.openclaw.title": {
+    "message": "OpenClaw",
+    "description": "OpenClaw 教程标题"
+  },
+  "homepage.tutorial.openclaw.desc": {
+    "message": "开源 AI 助手框架",
+    "description": "OpenClaw 教程描述"
+  },
+  "homepage.tutorial.opencode.title": {
+    "message": "OpenCode",
+    "description": "OpenCode 教程标题"
+  },
+  "homepage.tutorial.opencode.desc": {
+    "message": "AI 编程助手",
+    "description": "OpenCode 教程描述"
+  },
   "homepage.tutorials": {
     "message": "教程",
     "description": "Tutorials section title"

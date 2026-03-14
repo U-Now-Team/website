@@ -56,3 +56,79 @@
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* Carousel Styles */
+.carouselSection {
+  padding: 3rem 1rem;
+  background: var(--ifm-background-color);
+}
+
+.carouselWrapper {
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.tutorialCard {
+  flex: 0 0 100%;
+  display: block;
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cardContent h3 {
+  margin: 0 0 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.cardContent p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ifm-color-emphasis-300);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dotActive {
+  background: var(--ifm-color-primary);
+}

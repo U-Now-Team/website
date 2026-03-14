@@ -362,6 +362,22 @@
     "message": "Explore cutting-edge technology, lead the industry",
     "description": "Frontier feature description"
   },
+  "homepage.tutorial.openclaw.title": {
+    "message": "OpenClaw",
+    "description": "OpenClaw tutorial title"
+  },
+  "homepage.tutorial.openclaw.desc": {
+    "message": "Open-source AI Assistant Framework",
+    "description": "OpenClaw tutorial description"
+  },
+  "homepage.tutorial.opencode.title": {
+    "message": "OpenCode",
+    "description": "OpenCode tutorial title"
+  },
+  "homepage.tutorial.opencode.desc": {
+    "message": "AI Programming Assistant",
+    "description": "OpenCode tutorial description"
+  },
   "homepage.tutorials": {
     "message": "Tutorials",
     "description": "Tutorials section title"
