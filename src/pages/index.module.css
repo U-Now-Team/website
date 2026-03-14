@@ -4,57 +4,54 @@
  */
 
 .heroBanner {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.searchSection {
-  padding: 3rem 1rem;
-  text-align: center;
-  background: var(--ifm-background-color);
-}
-
-.searchForm {
-  display: flex;
-  max-width: 600px;
-  margin: 0 auto;
-  gap: 0.5rem;
-}
-
-.searchInput {
-  flex: 1;
-  padding: 0.875rem 1.25rem;
-  font-size: 1rem;
-  border: 2px solid var(--ifm-color-emphasis-200);
-  border-radius: 50px;
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.searchInput:focus {
-  border-color: var(--ifm-color-primary);
-}
-
-.searchInput::placeholder {
-  color: var(--ifm-color-emphasis-400);
-}
-
-.searchButton {
-  padding: 0.875rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+.subtitleButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   border: none;
   border-radius: 50px;
-  background: var(--ifm-color-primary);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.searchButton:hover {
-  opacity: 0.9;
+.subtitleButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.emojiPop {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  animation: popUp 1.5s ease-out forwards;
+  white-space: nowrap;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
+  }
+}
+
+.likeCount {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
