@@ -49,18 +49,18 @@ function HomepageHeader() {
 function TutorialCard({
   title,
   description,
-  image,
+  gradient,
   to,
 }: {
   title: string;
   description: string;
-  image: string;
+  gradient: string;
   to: string;
 }): ReactNode {
   return (
     <a href={to} className={styles.tutorialCard}>
-      <div className={styles.cardImage}>
-        <img src={image} alt={title} />
+      <div className={styles.cardImage} style={{ background: gradient }}>
+        <span className={styles.cardTitle}>{title}</span>
       </div>
       <div className={styles.cardContent}>
         <h3>{title}</h3>
@@ -81,7 +81,7 @@ function TutorialCarousel(): ReactNode {
         id: "homepage.tutorial.openclaw.desc",
         message: "开源 AI 助手框架",
       }),
-      image: "/img/openclaw.svg",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       to: "/website/docs/openclaw/",
     },
     {
@@ -93,7 +93,7 @@ function TutorialCarousel(): ReactNode {
         id: "homepage.tutorial.opencode.desc",
         message: "AI 编程助手",
       }),
-      image: "/img/opencode.svg",
+      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
       to: "/website/docs/opencode/",
     },
   ];
