@@ -74,10 +74,6 @@ const config: Config = {
     navbar: {
       items: [
         {
-          type: "localeDropdown",
-          position: "right",
-        },
-        {
           to: "/",
           label: "Home",
           position: "left",
@@ -96,6 +92,10 @@ const config: Config = {
               label: "OpenCode",
             },
           ],
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
         },
         {
           href: "https://github.com/U-Now-Team/website",
