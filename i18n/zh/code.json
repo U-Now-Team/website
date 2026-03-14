@@ -394,10 +394,6 @@
     "message": "OpenCode",
     "description": "OpenCode tutorial title"
   },
-  "homepage.tutorial.opencode.desc": {
-    "message": "AI 编程助手",
-    "description": "OpenCode tutorial description"
-  },
   "homepage.description": {
     "message": "U·Now 团队官方文档中心",
     "description": "The homepage description"
