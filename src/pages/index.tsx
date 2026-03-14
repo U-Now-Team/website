@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { useState, useEffect } from "react";
 import clsx from "clsx";
+import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
@@ -58,7 +59,7 @@ function TutorialCard({
   to: string;
 }): ReactNode {
   return (
-    <a href={to} className={styles.tutorialCard}>
+    <Link to={to} className={styles.tutorialCard}>
       <div className={styles.cardImage} style={{ background: gradient }}>
         <span className={styles.cardTitle}>{title}</span>
       </div>
@@ -66,7 +67,7 @@ function TutorialCard({
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -82,7 +83,7 @@ function TutorialCarousel(): ReactNode {
         message: "开源 AI 助手框架",
       }),
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      to: "/website/docs/openclaw/",
+      to: "/docs/openclaw/",
     },
     {
       title: translate({
@@ -94,7 +95,7 @@ function TutorialCarousel(): ReactNode {
         message: "AI 编程助手",
       }),
       gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
-      to: "/website/docs/opencode/",
+      to: "/docs/opencode/",
     },
   ];
 
