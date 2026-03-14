@@ -115,7 +115,7 @@
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": "于 {date} ",
+    "message": "更新于 {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
@@ -123,7 +123,7 @@
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "最后{byUser}{atDate}更新",
+    "message": "最后更新：{atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
@@ -323,12 +323,10 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "homepage.title": {
-    "message": "U·Now 文档",
-    "description": "The homepage title"
+    "message": "U·Now 文档"
   },
   "homepage.subtitle": {
-    "message": "不必多言，当下正好",
-    "description": "The homepage subtitle"
+    "message": "不必多言，当下正好"
   },
   "homepage.searchPlaceholder": {
     "message": "搜索文档...",
@@ -363,40 +361,23 @@
     "description": "前沿特性描述"
   },
   "homepage.tutorial.openclaw.title": {
-    "message": "OpenClaw",
-    "description": "OpenClaw 教程标题"
+    "message": "OpenClaw"
   },
   "homepage.tutorial.openclaw.desc": {
-    "message": "开源 AI 助手框架",
-    "description": "OpenClaw 教程描述"
+    "message": "开源 AI 助手框架"
   },
   "homepage.tutorial.opencode.title": {
-    "message": "OpenCode",
-    "description": "OpenCode 教程标题"
+    "message": "OpenCode"
   },
   "homepage.tutorial.opencode.desc": {
-    "message": "开源 AI 编程助手",
-    "description": "OpenCode 教程描述"
+    "message": "开源 AI 编程助手"
   },
   "homepage.tutorials": {
     "message": "教程",
     "description": "Tutorials section title"
   },
-  "homepage.tutorial.openclaw.title": {
-    "message": "OpenClaw",
-    "description": "OpenClaw tutorial title"
-  },
-  "homepage.tutorial.openclaw.desc": {
-    "message": "开源 AI 助手框架",
-    "description": "OpenClaw tutorial description"
-  },
-  "homepage.tutorial.opencode.title": {
-    "message": "OpenCode",
-    "description": "OpenCode tutorial title"
-  },
   "homepage.description": {
-    "message": "U·Now 团队官方文档中心",
-    "description": "The homepage description"
+    "message": "U·Now 团队官方文档中心"
   },
   "homepage.getStarted": {
     "message": "开始使用",
@@ -437,18 +418,6 @@
   "homepage.feature.community.desc": {
     "message": "开放的社区，共同成长",
     "description": "Community feature description"
-  },
-  "theme.lastUpdated.atDate": {
-    "message": "更新于 {date}",
-    "description": "The words used to describe on which date a page has been last updated"
-  },
-  "theme.lastUpdated.byUser": {
-    "message": "由 {user} ",
-    "description": "The words used to describe by who the page has been last updated"
-  },
-  "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "最后更新：{atDate}",
-    "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.tags.tagsPageTitle": {
     "message": "标签",
