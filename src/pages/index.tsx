@@ -40,15 +40,29 @@ function HomepageHeader() {
 function Feature({
   title,
   description,
+  to,
 }: {
   title: string;
   description: string;
+  to?: string;
 }): ReactNode {
+  const content = (
+    <>
+      <Heading as="h3">{title}</Heading>
+      <p>{description}</p>
+    </>
+  );
+
   return (
     <div className={clsx("col col--4")}>
       <div className="padding-horiz--md padding-vert--lg">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        {to ? (
+          <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
+            {content}
+          </Link>
+        ) : (
+          content
+        )}
       </div>
     </div>
   );
@@ -58,6 +72,20 @@ function HomepageFeatures(): ReactNode {
   const features = [
     {
       title: translate({
+        id: "homepage.feature.ai-dev.title",
+        message: "AI 开发",
+      }),
+      description: translate({
+        id: "homepage.feature.ai-dev.desc",
+        message: "开源 AI 助手与编程工具",
+      }),
+      isCategory: true,
+    },
+  ];
+
+  const aiFeatures = [
+    {
+      title: translate({
         id: "homepage.feature.openclaw.title",
         message: "OpenClaw",
       }),
@@ -65,6 +93,7 @@ function HomepageFeatures(): ReactNode {
         id: "homepage.feature.openclaw.desc",
         message: "开源 AI 助手框架，支持多平台集成",
       }),
+      to: "/docs/ai-dev/openclaw/",
     },
     {
       title: translate({
@@ -75,16 +104,7 @@ function HomepageFeatures(): ReactNode {
         id: "homepage.feature.opencode.desc",
         message: "新一代 AI 编程助手，提升开发效率",
       }),
-    },
-    {
-      title: translate({
-        id: "homepage.feature.community.title",
-        message: "社区支持",
-      }),
-      description: translate({
-        id: "homepage.feature.community.desc",
-        message: "开放的社区，共同成长",
-      }),
+      to: "/docs/ai-dev/opencode/",
     },
   ];
 
@@ -93,6 +113,11 @@ function HomepageFeatures(): ReactNode {
       <div className="container">
         <div className="row">
           {features.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+        <div className="row">
+          {aiFeatures.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

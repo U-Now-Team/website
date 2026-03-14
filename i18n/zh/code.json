@@ -358,6 +358,14 @@
     "message": "新一代 AI 编程助手，提升开发效率",
     "description": "OpenCode feature description"
   },
+  "homepage.feature.ai-dev.title": {
+    "message": "AI 开发",
+    "description": "AI 开发分类标题"
+  },
+  "homepage.feature.ai-dev.desc": {
+    "message": "开源 AI 助手与编程工具",
+    "description": "AI 开发分类描述"
+  },
   "homepage.feature.community.title": {
     "message": "社区支持",
     "description": "Community feature title"

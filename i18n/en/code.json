@@ -358,6 +358,14 @@
     "message": "Next-gen AI coding assistant to boost development efficiency",
     "description": "OpenCode feature description"
   },
+  "homepage.feature.ai-dev.title": {
+    "message": "AI Development",
+    "description": "AI Development category title"
+  },
+  "homepage.feature.ai-dev.desc": {
+    "message": "Open-source AI assistant and programming tools",
+    "description": "AI Development category description"
+  },
   "homepage.feature.community.title": {
     "message": "Community",
     "description": "Community feature title"
