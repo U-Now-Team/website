@@ -4,22 +4,22 @@
  */
 
 .heroBanner {
-  padding: 6rem 0;
+  padding: 2rem 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 4rem 1rem;
-  }
+.searchSection {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: var(--ifm-background-color);
 }
 
 .searchForm {
   display: flex;
   max-width: 600px;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   gap: 0.5rem;
 }
 

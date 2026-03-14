@@ -17,19 +17,23 @@ function HomepageHeader() {
     const formData = new FormData(e.currentTarget);
     const query = formData.get("search") as string;
     if (query.trim()) {
-      history.push(`/search?q=${encodeURIComponent(query)}`);
+      window.location.href = `/website/search?q=${encodeURIComponent(query)}`;
     }
   };
 
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          <Translate id="homepage.title">U·Now 文档</Translate>
-        </Heading>
-        <p className="hero__subtitle">
-          <Translate id="homepage.subtitle">不必多言，当下正好</Translate>
-        </p>
+    <div>
+      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+        <div className="container">
+          <Heading as="h1" className="hero__title">
+            <Translate id="homepage.title">U·Now 文档</Translate>
+          </Heading>
+          <p className="hero__subtitle">
+            <Translate id="homepage.subtitle">不必多言，当下正好</Translate>
+          </p>
+        </div>
+      </header>
+      <div className={styles.searchSection}>
         <form onSubmit={handleSearch} className={styles.searchForm}>
           <input
             type="search"
@@ -45,7 +49,7 @@ function HomepageHeader() {
           </button>
         </form>
       </div>
-    </header>
+    </div>
   );
 }
 
