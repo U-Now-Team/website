@@ -123,7 +123,7 @@
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated{atDate}{byUser}",
+    "message": "Last updated: {atDate}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
@@ -323,12 +323,10 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "homepage.title": {
-    "message": "U·Now Docs",
-    "description": "The homepage title"
+    "message": "U·Now Docs"
   },
   "homepage.subtitle": {
-    "message": "U Know, U Now",
-    "description": "The homepage subtitle"
+    "message": "U Know, U Now"
   },
   "homepage.searchPlaceholder": {
     "message": "Search docs...",
@@ -363,40 +361,23 @@
     "description": "Frontier feature description"
   },
   "homepage.tutorial.openclaw.title": {
-    "message": "OpenClaw",
-    "description": "OpenClaw tutorial title"
+    "message": "OpenClaw"
   },
   "homepage.tutorial.openclaw.desc": {
-    "message": "Open-source AI Assistant Framework",
-    "description": "OpenClaw tutorial description"
+    "message": "Open-source AI Assistant Framework"
   },
   "homepage.tutorial.opencode.title": {
-    "message": "OpenCode",
-    "description": "OpenCode tutorial title"
+    "message": "OpenCode"
   },
   "homepage.tutorial.opencode.desc": {
-    "message": "Open-source AI Programming Assistant",
-    "description": "OpenCode tutorial description"
+    "message": "Open-source AI Programming Assistant"
   },
   "homepage.tutorials": {
     "message": "Tutorials",
     "description": "Tutorials section title"
   },
-  "homepage.tutorial.openclaw.title": {
-    "message": "OpenClaw",
-    "description": "OpenClaw tutorial title"
-  },
-  "homepage.tutorial.openclaw.desc": {
-    "message": "Open-source AI Assistant Framework",
-    "description": "OpenClaw tutorial description"
-  },
-  "homepage.tutorial.opencode.title": {
-    "message": "OpenCode",
-    "description": "OpenCode tutorial title"
-  },
   "homepage.description": {
-    "message": "U·Now team official documentation center",
-    "description": "The homepage description"
+    "message": "U·Now team official documentation center"
   },
   "homepage.getStarted": {
     "message": "Get Started",
@@ -437,18 +418,6 @@
   "homepage.feature.community.desc": {
     "message": "Open community, grow together",
     "description": "Community feature description"
-  },
-  "theme.lastUpdated.atDate": {
-    "message": " on {date}",
-    "description": "The words used to describe on which date a page has been last updated"
-  },
-  "theme.lastUpdated.byUser": {
-    "message": " by {user}",
-    "description": "The words used to describe by who the page has been last updated"
-  },
-  "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated: {atDate}",
-    "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.tags.tagsPageTitle": {
     "message": "Tags",

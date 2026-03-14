@@ -5,10 +5,18 @@
   },
   "item.label.AI 开发": {
     "message": "AI Development",
-    "description": "Navbar item for AI development"
+    "description": "Navbar item with label AI 开发"
   },
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.OpenClaw": {
+    "message": "OpenClaw",
+    "description": "Navbar item with label OpenClaw"
+  },
+  "item.label.OpenCode": {
+    "message": "OpenCode",
+    "description": "Navbar item with label OpenCode"
   }
 }
