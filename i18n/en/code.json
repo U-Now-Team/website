@@ -322,6 +322,62 @@
     "message": "Skip to main content",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
+  "homepage.title": {
+    "message": "U·Now Docs",
+    "description": "The homepage title"
+  },
+  "homepage.subtitle": {
+    "message": "U Know, U Now",
+    "description": "The homepage subtitle"
+  },
+  "homepage.description": {
+    "message": "U·Now team official documentation center",
+    "description": "The homepage description"
+  },
+  "homepage.getStarted": {
+    "message": "Get Started",
+    "description": "Get started button"
+  },
+  "homepage.viewGithub": {
+    "message": "View GitHub",
+    "description": "View GitHub button"
+  },
+  "homepage.feature.openclaw.title": {
+    "message": "OpenClaw",
+    "description": "OpenClaw feature title"
+  },
+  "homepage.feature.openclaw.desc": {
+    "message": "Open-source AI assistant framework with multi-platform integration",
+    "description": "OpenClaw feature description"
+  },
+  "homepage.feature.opencode.title": {
+    "message": "OpenCode",
+    "description": "OpenCode feature title"
+  },
+  "homepage.feature.opencode.desc": {
+    "message": "Next-gen AI coding assistant to boost development efficiency",
+    "description": "OpenCode feature description"
+  },
+  "homepage.feature.community.title": {
+    "message": "Community",
+    "description": "Community feature title"
+  },
+  "homepage.feature.community.desc": {
+    "message": "Open community, grow together",
+    "description": "Community feature description"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " on {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " by {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Last updated: {atDate}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"

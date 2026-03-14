@@ -322,6 +322,62 @@
     "message": "跳到主要内容",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
+  "homepage.title": {
+    "message": "U·Now 文档",
+    "description": "The homepage title"
+  },
+  "homepage.subtitle": {
+    "message": "U Know, U Now",
+    "description": "The homepage subtitle"
+  },
+  "homepage.description": {
+    "message": "U·Now 团队官方文档中心",
+    "description": "The homepage description"
+  },
+  "homepage.getStarted": {
+    "message": "开始使用",
+    "description": "Get started button"
+  },
+  "homepage.viewGithub": {
+    "message": "查看 GitHub",
+    "description": "View GitHub button"
+  },
+  "homepage.feature.openclaw.title": {
+    "message": "OpenClaw",
+    "description": "OpenClaw feature title"
+  },
+  "homepage.feature.openclaw.desc": {
+    "message": "开源 AI 助手框架，支持多平台集成",
+    "description": "OpenClaw feature description"
+  },
+  "homepage.feature.opencode.title": {
+    "message": "OpenCode",
+    "description": "OpenCode feature title"
+  },
+  "homepage.feature.opencode.desc": {
+    "message": "新一代 AI 编程助手，提升开发效率",
+    "description": "OpenCode feature description"
+  },
+  "homepage.feature.community.title": {
+    "message": "社区支持",
+    "description": "Community feature title"
+  },
+  "homepage.feature.community.desc": {
+    "message": "开放的社区，共同成长",
+    "description": "Community feature description"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": "更新于 {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": "由 {user} ",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "最后更新：{atDate}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"
