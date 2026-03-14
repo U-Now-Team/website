@@ -34,7 +34,7 @@ const config: Config = {
     locales: ["zh", "en"],
     localeConfigs: {
       zh: {
-        label: "中文",
+        label: "简体中文",
         direction: "ltr",
       },
       en: {
