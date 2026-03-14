@@ -82,7 +82,7 @@ function TutorialCarousel(): ReactNode {
         message: "开源 AI 助手框架",
       }),
       image: "/img/openclaw.svg",
-      to: "/docs/openclaw/",
+      to: "/website/docs/openclaw/",
     },
     {
       title: translate({
@@ -94,7 +94,7 @@ function TutorialCarousel(): ReactNode {
         message: "AI 编程助手",
       }),
       image: "/img/opencode.svg",
-      to: "/docs/opencode/",
+      to: "/website/docs/opencode/",
     },
   ];
 
