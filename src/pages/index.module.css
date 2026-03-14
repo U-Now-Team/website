@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 8rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -16,15 +16,17 @@
   }
 }
 
-.searchBox {
+.searchForm {
+  display: flex;
   max-width: 600px;
   margin: 2rem auto 0;
+  gap: 0.5rem;
 }
 
 .searchInput {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
   border: 2px solid var(--ifm-color-emphasis-200);
   border-radius: 50px;
   background: var(--ifm-background-surface-color);
@@ -41,58 +43,18 @@
   color: var(--ifm-color-emphasis-400);
 }
 
-.tutorialSection {
-  padding: 4rem 0;
-  background: var(--ifm-background-surface-color);
+.searchButton {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: var(--ifm-color-primary);
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
-.sectionTitle {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-.carousel {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding: 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.tutorialCard {
-  flex: 0 0 300px;
-  scroll-snap-align: center;
-  background: var(--ifm-card-background-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tutorialCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.tutorialCard a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.tutorialCard h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.3rem;
-  color: var(--ifm-color-primary);
-}
-
-.tutorialCard p {
-  margin: 0;
-  color: var(--ifm-color-emphasis-600);
-  font-size: 0.95rem;
+.searchButton:hover {
+  opacity: 0.9;
 }

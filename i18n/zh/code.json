@@ -334,6 +334,10 @@
     "message": "搜索文档...",
     "description": "Search box placeholder"
   },
+  "homepage.search": {
+    "message": "搜索",
+    "description": "Search button text"
+  },
   "homepage.tutorials": {
     "message": "教程",
     "description": "Tutorials section title"

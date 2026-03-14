@@ -334,6 +334,10 @@
     "message": "Search docs...",
     "description": "Search box placeholder"
   },
+  "homepage.search": {
+    "message": "Search",
+    "description": "Search button text"
+  },
   "homepage.tutorials": {
     "message": "Tutorials",
     "description": "Tutorials section title"

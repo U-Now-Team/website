@@ -4,12 +4,23 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import Translate, { translate } from "@docusaurus/Translate";
-import Link from "@docusaurus/Link";
+import { useHistory } from "@docusaurus/router";
 
 import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const history = useHistory();
+  
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const query = formData.get("search") as string;
+    if (query.trim()) {
+      history.push(`/search?q=${encodeURIComponent(query)}`);
+    }
+  };
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
@@ -19,6 +30,20 @@ function HomepageHeader() {
         <p className="hero__subtitle">
           <Translate id="homepage.subtitle">不必多言，当下正好</Translate>
         </p>
+        <form onSubmit={handleSearch} className={styles.searchForm}>
+          <input
+            type="search"
+            name="search"
+            placeholder={translate({
+              id: "homepage.searchPlaceholder",
+              message: "搜索文档...",
+            })}
+            className={styles.searchInput}
+          />
+          <button type="submit" className={styles.searchButton}>
+            <Translate id="homepage.search">搜索</Translate>
+          </button>
+        </form>
       </div>
     </header>
   );
