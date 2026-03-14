@@ -338,6 +338,30 @@
     "message": "Search",
     "description": "Search button text"
   },
+  "homepage.feature.opensource.title": {
+    "message": "Open Source",
+    "description": "Open source feature title"
+  },
+  "homepage.feature.opensource.desc": {
+    "message": "Open sharing, driving technological progress",
+    "description": "Open source feature description"
+  },
+  "homepage.feature.passion.title": {
+    "message": "Passion",
+    "description": "Passion feature title"
+  },
+  "homepage.feature.passion.desc": {
+    "message": "Focus on innovation, pursuing excellence",
+    "description": "Passion feature description"
+  },
+  "homepage.feature.frontier.title": {
+    "message": "Frontier",
+    "description": "Frontier feature title"
+  },
+  "homepage.feature.frontier.desc": {
+    "message": "Explore cutting-edge technology, lead the industry",
+    "description": "Frontier feature description"
+  },
   "homepage.tutorials": {
     "message": "Tutorials",
     "description": "Tutorials section title"

@@ -338,6 +338,30 @@
     "message": "搜索",
     "description": "Search button text"
   },
+  "homepage.feature.opensource.title": {
+    "message": "开源",
+    "description": "开源特性标题"
+  },
+  "homepage.feature.opensource.desc": {
+    "message": "开放共享，推动技术进步",
+    "description": "开源特性描述"
+  },
+  "homepage.feature.passion.title": {
+    "message": "热爱",
+    "description": "热爱特性标题"
+  },
+  "homepage.feature.passion.desc": {
+    "message": "专注创新，追求极致",
+    "description": "热爱特性描述"
+  },
+  "homepage.feature.frontier.title": {
+    "message": "前沿",
+    "description": "前沿特性标题"
+  },
+  "homepage.feature.frontier.desc": {
+    "message": "探索前沿技术，引领行业",
+    "description": "前沿特性描述"
+  },
   "homepage.tutorials": {
     "message": "教程",
     "description": "Tutorials section title"

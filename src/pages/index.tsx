@@ -46,6 +46,68 @@ function HomepageHeader() {
   );
 }
 
+function FeatureCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}): ReactNode {
+  return (
+    <div className={styles.featureCard}>
+      <h3 className={styles.featureTitle}>{title}</h3>
+      <p className={styles.featureDesc}>{description}</p>
+    </div>
+  );
+}
+
+function HomepageFeatures(): ReactNode {
+  const features = [
+    {
+      title: translate({
+        id: "homepage.feature.opensource.title",
+        message: "开源",
+      }),
+      description: translate({
+        id: "homepage.feature.opensource.desc",
+        message: "开放共享，推动技术进步",
+      }),
+    },
+    {
+      title: translate({
+        id: "homepage.feature.passion.title",
+        message: "热爱",
+      }),
+      description: translate({
+        id: "homepage.feature.passion.desc",
+        message: "专注创新，追求极致",
+      }),
+    },
+    {
+      title: translate({
+        id: "homepage.feature.frontier.title",
+        message: "前沿",
+      }),
+      description: translate({
+        id: "homepage.feature.frontier.desc",
+        message: "探索前沿技术，引领行业",
+      }),
+    },
+  ];
+
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <div className={styles.featuresGrid}>
+          {features.map((props, idx) => (
+            <FeatureCard key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -57,6 +119,9 @@ export default function Home(): ReactNode {
       })}
     >
       <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
     </Layout>
   );
 }
