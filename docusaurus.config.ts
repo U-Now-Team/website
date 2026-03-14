@@ -83,14 +83,19 @@ const config: Config = {
           position: "left",
         },
         {
-          to: "/docs/openclaw/",
-          label: "OpenClaw",
+          type: "dropdown",
+          label: "AI 开发",
           position: "left",
-        },
-        {
-          to: "/docs/opencode/",
-          label: "OpenCode",
-          position: "left",
+          items: [
+            {
+              to: "/docs/openclaw/",
+              label: "OpenClaw",
+            },
+            {
+              to: "/docs/opencode/",
+              label: "OpenCode",
+            },
+          ],
         },
         {
           href: "https://github.com/U-Now-Team/website",
