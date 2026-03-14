@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 6rem 0;
+  padding: 8rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,30 +12,87 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
   }
 }
 
-.heroButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+.searchBox {
+  max-width: 600px;
+  margin: 2rem auto 0;
 }
 
-.features {
-  display: flex;
-  align-items: center;
-  padding: 4rem 0;
+.searchInput {
   width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--ifm-color-emphasis-200);
+  border-radius: 50px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.features h3 {
-  text-align: center;
+.searchInput:focus {
+  border-color: var(--ifm-color-primary);
 }
 
-.features p {
+.searchInput::placeholder {
+  color: var(--ifm-color-emphasis-400);
+}
+
+.tutorialSection {
+  padding: 4rem 0;
+  background: var(--ifm-background-surface-color);
+}
+
+.sectionTitle {
   text-align: center;
-  color: var(--ifm-color-emphasis);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.tutorialCard {
+  flex: 0 0 300px;
+  scroll-snap-align: center;
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorialCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tutorialCard a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tutorialCard h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: var(--ifm-color-primary);
+}
+
+.tutorialCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.95rem;
 }

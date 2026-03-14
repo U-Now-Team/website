@@ -327,8 +327,32 @@
     "description": "The homepage title"
   },
   "homepage.subtitle": {
-    "message": "U Know, U Now",
+    "message": "不必多言，当下正好",
     "description": "The homepage subtitle"
+  },
+  "homepage.searchPlaceholder": {
+    "message": "搜索文档...",
+    "description": "Search box placeholder"
+  },
+  "homepage.tutorials": {
+    "message": "教程",
+    "description": "Tutorials section title"
+  },
+  "homepage.tutorial.openclaw.title": {
+    "message": "OpenClaw",
+    "description": "OpenClaw tutorial title"
+  },
+  "homepage.tutorial.openclaw.desc": {
+    "message": "开源 AI 助手框架",
+    "description": "OpenClaw tutorial description"
+  },
+  "homepage.tutorial.opencode.title": {
+    "message": "OpenCode",
+    "description": "OpenCode tutorial title"
+  },
+  "homepage.tutorial.opencode.desc": {
+    "message": "AI 编程助手",
+    "description": "OpenCode tutorial description"
   },
   "homepage.description": {
     "message": "U·Now 团队官方文档中心",

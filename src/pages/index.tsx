@@ -4,7 +4,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import Translate, { translate } from "@docusaurus/Translate";
-import Link from "@docusaurus/Link";
 
 import styles from "./index.module.css";
 
@@ -17,108 +16,77 @@ function HomepageHeader() {
           <Translate id="homepage.title">U·Now 文档</Translate>
         </Heading>
         <p className="hero__subtitle">
-          <Translate id="homepage.subtitle">U Know, U Now</Translate>
+          <Translate id="homepage.subtitle">不必多言，当下正好</Translate>
         </p>
-        <div className={styles.heroButtons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/ai-dev/">
-            <Translate id="homepage.getStarted">开始使用</Translate>
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="https://github.com/U-Now-Team"
-            target="_blank">
-            <Translate id="homepage.viewGithub">查看 GitHub</Translate>
-          </Link>
+        <div className={styles.searchBox}>
+          <input
+            type="search"
+            placeholder={translate({
+              id: "homepage.searchPlaceholder",
+              message: "搜索文档...",
+            })}
+            className={styles.searchInput}
+          />
         </div>
       </div>
     </header>
   );
 }
 
-function Feature({
+function TutorialCard({
   title,
   description,
   to,
 }: {
   title: string;
   description: string;
-  to?: string;
+  to: string;
 }): ReactNode {
-  const content = (
-    <>
-      <Heading as="h3">{title}</Heading>
-      <p>{description}</p>
-    </>
-  );
-
   return (
-    <div className={clsx("col col--4")}>
-      <div className="padding-horiz--md padding-vert--lg">
-        {to ? (
-          <Link to={to} style={{ textDecoration: "none", color: "inherit" }}>
-            {content}
-          </Link>
-        ) : (
-          content
-        )}
-      </div>
+    <div className={styles.tutorialCard}>
+      <a href={to}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </a>
     </div>
   );
 }
 
-function HomepageFeatures(): ReactNode {
-  const features = [
+function TutorialCarousel(): ReactNode {
+  const tutorials = [
     {
       title: translate({
-        id: "homepage.feature.ai-dev.title",
-        message: "AI 开发",
-      }),
-      description: translate({
-        id: "homepage.feature.ai-dev.desc",
-        message: "开源 AI 助手与编程工具",
-      }),
-      isCategory: true,
-    },
-  ];
-
-  const aiFeatures = [
-    {
-      title: translate({
-        id: "homepage.feature.openclaw.title",
+        id: "homepage.tutorial.openclaw.title",
         message: "OpenClaw",
       }),
       description: translate({
-        id: "homepage.feature.openclaw.desc",
-        message: "开源 AI 助手框架，支持多平台集成",
+        id: "homepage.tutorial.openclaw.desc",
+        message: "开源 AI 助手框架",
       }),
       to: "/docs/ai-dev/openclaw/",
     },
     {
       title: translate({
-        id: "homepage.feature.opencode.title",
+        id: "homepage.tutorial.opencode.title",
         message: "OpenCode",
       }),
       description: translate({
-        id: "homepage.feature.opencode.desc",
-        message: "新一代 AI 编程助手，提升开发效率",
+        id: "homepage.tutorial.opencode.desc",
+        message: "AI 编程助手",
       }),
       to: "/docs/ai-dev/opencode/",
     },
   ];
 
   return (
-    <section className={styles.features}>
+    <section className={styles.tutorialSection}>
       <div className="container">
-        <div className="row">
-          {features.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-        <div className="row">
-          {aiFeatures.map((props, idx) => (
-            <Feature key={idx} {...props} />
+        <h2 className={styles.sectionTitle}>
+          <Translate id="homepage.tutorials">教程</Translate>
+        </h2>
+        <div className={styles.carousel}>
+          {tutorials.map((tutorial, idx) => (
+            <TutorialCard key={idx} {...tutorial} />
           ))}
         </div>
       </div>
@@ -138,7 +106,7 @@ export default function Home(): ReactNode {
     >
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <TutorialCarousel />
       </main>
     </Layout>
   );
